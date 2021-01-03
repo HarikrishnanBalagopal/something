@@ -1,5 +1,5 @@
 GIT_DIRTY  = $(shell test -n "`git status --porcelain`" && echo "dirty" || echo "clean")
-GIT_DIFF = $(shell git diff --name-only | tr '\n' ',')
+GIT_DIFF = $(shell git ls-files -o --exclude-standard | tr '\n' ',')
 
 .PHONY: all
 all: clean build
