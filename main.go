@@ -3,7 +3,12 @@ package main
 import (
 	"fmt"
 	"strings"
+
+	"github.com/HarikrishnanBalagopal/something/something"
 )
+
+// GitDirty tells us if the working directory is clean
+var GitDirty = "empty"
 
 const x = `
 Yeah
@@ -50,4 +55,6 @@ func main() {
 			fmt.Println("****")
 		}
 	}
+	fmt.Println("main.GitDirty is", GitDirty)
+	fmt.Println("something.GitDiffFileNames is", something.GitDiffFileNames)
 }
