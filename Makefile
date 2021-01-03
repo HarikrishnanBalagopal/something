@@ -10,4 +10,4 @@ clean:
 
 .PHONY: build
 build:
-	go build -o dist/something -ldflags="-X 'main.Y=${GIT_DIRTY}' -X 'github.com/HarikrishnanBalagopal/something/something.GitDiffFileNames=${GIT_DIFF}'" main.go
+	go build -o dist/something -ldflags="-X 'main.GitDirty=${GIT_DIRTY}' -X 'github.com/HarikrishnanBalagopal/something/something.GitDiffFileNames=${GIT_DIFF}'" main.go
